@@ -1,7 +1,7 @@
 ## mako
 <%!
-  from django.core.urlresolvers import reverse
-  from django.utils.translation import ugettext as _
+    from django.core.urlresolvers import reverse
+    from django.utils.translation import ugettext as _
 %>
 <%namespace name='static' file='/static_content.html'/>
 
@@ -10,98 +10,66 @@
 <%block name="title"><title>${_('About')}</title></%block>
 
 <%block name="js_extra">
-  <script type="text/javascript">
-    $(function() {
-      $('section.message').hide();
-      $('#about-menu a').removeClass('active');
-      window.scrollTo(0,0);
-      var hash = window.location.hash
-
-      if (hash) {
-        $('section' + hash).show();
-        $('#about-menu a.' + hash.substring(1)).addClass('active');
-      } else {
-        $('section#about').show();
-        $('#about-menu a.about').addClass('active');
-      }
-
-      $('#about-menu a').click(function(event) {
-        event.preventDefault();
-        $('#about-menu a').removeClass('active');
-        $(this).addClass('active');
-        var clickId = "section" + $(this).attr('href');
-        $('section.message').hide();
-        $(clickId).show();
-      });
-    });
-  </script>
+    <script type="text/javascript">
+    </script>
 </%block>
 
-<section class="container about" style="width: auto;">
-  <nav id="about-menu">
-    <a href="#about" class="about active">${_('About')}</a>
-    <a href="#careers" class="careers">${_('Careers')}</a>
-    <a href="#contact" class="contact">${_('Contact')}</a>
-  </nav>
+<section class="container scenarios" style="width: auto;">
 
-  <section class="vision">
-
-## About Section ##
-    <section class="message left" id="about">
-      <div class="photo">
+    <div class="photo">
         <!--
             Photo License: CC0 Public Domain (Free for commercial use / No attribution required)
             https://pixabay.com/en/book-books-circle-curly-education-2869/
         -->
-        <img src="${static.url('themes/odltheme/images/about.jpg')}" alt="" />
-      </div>
-      <article>
-        <h2>${_('About')}</h2>
-
-        <p>Welcome to the Scenarios page!</p>
-
-        <p>&nbsp;</p>
-      </article>
-      <hr class="fade-right-hr-divider">
-    </section>
-
-## Careers Section ##
-    <section class="message left" id="careers">
-      <div class="photo">
-        <!--
-            Photo License: CC0 Public Domain (Free for commercial use / No attribution required)
-            https://pixabay.com/en/man-corporate-businessman-suit-tie-871960/
-        -->
-        <img src="${static.url('themes/odltheme/images/careers.jpg')}" alt="" />
-      </div>
-      <article>
-        <h2>${_('Careers')}</h2>
-
-        <p>Your job postings go here!</p>
-
-        <p>&nbsp;</p>
-      </article>
-      <hr class="fade-right-hr-divider">
-    </section>
-
-## Contact Section ##
-    <section class="message left" id="contact">
-      <div class="photo">
-        <!--
-            Photo License: CC0 Public Domain (Free for commercial use / No attribution required)
-            https://pixabay.com/en/network-cobweb-dewdrop-586177/
-        -->
-        <img src="${static.url('themes/odltheme/images/contact.jpg')}" alt="" />
-      </div>
-      <article id="stanford-OpenEdX-contact">
-        <h2>${_('Contact Us')}</h2>
-
-        <p>Your contact information goes here!</p>
-
-        <p>&nbsp;</p>
-      </article>
-      <hr class="fade-right-hr-divider">
-    </section>
-  </section>
-
+        <img src="${static.url('themes/odltheme/images/odl_scenarios.jpg')}" alt=""/>
+    </div>
+    <article>
+        <h2>Inquiry-Based Learning Scenarios</h2>
+        <p style="text-align: justify;">The ODL project grounds on student's active learning through inquiry-based
+            science instruction and exploitation of remote/virtual STEM laboratories.� ODL methodology incorporates four
+            key innovations: first, the use of micro-MOOCs and ICT-based educational instruments to motivate teachers in
+            the creation of flexible personalized teaching/learning paths and to increase students� interest and
+            involvement, due to the innovative methodology; second, the incorporation of remote/virtual laboratories, as
+            didactical instrument for practice-based learning, with the aim to capture the students� imagination and
+            motivation, effectively engaging them; third, the 5E cycle (ENGAGE, EXPLORE, EXPLAIN, EXTEND, EVALUATE) to
+            develop student critical thinking and to help students to explore and evaluate their learning; and finally,
+            by the deployment of practical exercises, evaluation tests, students will take control and awareness of
+            their learning.</p>
+        <p style="text-align: justify;">The ODL project should offer some suggestions that can guide teachers in
+            selecting topics and useful virtual/remote labs to develop suitable microMOOC-based teaching paths promoting
+            inquiry learning.</p>
+        <p style="text-align: justify;">In the ODL project, scenario is synonymous of pedagogical framework for MOOC
+            design and implementation. According to the discussion among the consortium partners at the kick-off
+            meeting, in order to ensure pedagogical coherence of all micro-MOOCs and, at the same time, to leave the
+            teachers free to create personalized teaching paths, the templates for MOOC scenarios� development will be
+            differentiated for<br>
+            (i) the level of teacher guidance;<br>
+            (ii) the� difficulty of the involved remote/virtual laboratories;<br>
+            (iii) the requested student's cognitive skills.</p>
+        <p style="text-align: justify;">In fact, there are various levels of inquiry in science education � the initial
+            level where the teacher directs every aspect, to the highest level where the student holds the control and
+            needs the intellectual and practical skills to become investigator, acting as a researcher. Through the
+            series of different levels of inquiry, the student becomes more able to carry out his/her own independent
+            inquiry, and the assistance of the teacher becomes different, less instructive, but more enabling and
+            flexible.</p>
+        <a href="http://opendiscoverylabs.eu/wp-content/uploads/2016/04/ODL_scenarios.pdf" rel=""><strong><em>Common
+            aspects of all scenarios</em></strong></a>
+        <p style="padding-left: 60px;"><strong><em>Scenario 1: Basic approach</em></strong> (Confirmation Inquiry) [<a
+                href="http://opendiscoverylabs.eu/wp-content/uploads/2016/04/ODL_Scenario_1.pdf" rel=""><u>EN</u></a>,
+            <a href="http://opendiscoverylabs.eu/wp-content/uploads/2017/01/escenario1.pdf" rel=""><u>ES</u></a>] </p>
+        <p style="padding-left: 60px;"><strong><em>Scenario 2: Intermediate approach</em></strong> (Structured/Guided
+            Inquiry) [<a href="http://opendiscoverylabs.eu/wp-content/uploads/2016/04/ODL_Scenario_2.pdf"
+                         rel=""><u>EN</u></a>, <a
+                    href="http://opendiscoverylabs.eu/wp-content/uploads/2017/01/escenario2.pdf" rel=""><u>ES</u></a>]
+        </p>
+        <p style="padding-left: 60px;"><strong><em>Scenario 3: Advanced approach </em></strong>(Elicited/Open Inquiry) [<a
+                href="http://opendiscoverylabs.eu/wp-content/uploads/2016/04/ODL_Scenario_3.pdf" rel=""><u>EN</u></a>,
+            <a href="http://opendiscoverylabs.eu/wp-content/uploads/2017/01/escenario3.pdf" rel=""><u>ES</u></a>]</p>
+        <a href="http://opendiscoverylabs.eu/wp-content/uploads/2016/04/ODL_mMOOC_TimeSchedule.pdf" rel=""><strong><em>Time
+            schedule for micro-MOOC development</em></strong></a>
+        <a href="http://opendiscoverylabs.eu/wp-content/uploads/2016/04/ODL_MOOC_identityCard.pdf" rel=""><strong><em>MOOC
+            Identity Card</em></strong></a>
+        <a href="http://opendiscoverylabs.eu/wp-content/uploads/2016/04/Literature.pdf"
+           rel=""><strong><em>Literature</em></strong></a>
+    </article>
 </section>
