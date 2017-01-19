@@ -9,41 +9,12 @@
 
 <%block name="title"><title>${_('About')}</title></%block>
 
-<%block name="js_extra">
-  <script type="text/javascript">
-    $(function() {
-      $('section.message').hide();
-      $('#about-menu a').removeClass('active');
-      window.scrollTo(0,0);
-      var hash = window.location.hash
-
-      if (hash) {
-        $('section' + hash).show();
-        $('#about-menu a.' + hash.substring(1)).addClass('active');
-      } else {
-        $('section#about').show();
-        $('#about-menu a.about').addClass('active');
-      }
-
-      $('#about-menu a').click(function(event) {
-        event.preventDefault();
-        $('#about-menu a').removeClass('active');
-        $(this).addClass('active');
-        var clickId = "section" + $(this).attr('href');
-        $('section.message').hide();
-        $(clickId).show();
-      });
-    });
-  </script>
-</%block>
-
 <section class="container about" style="width: auto;">
 
     <h2>Technical Issue</h2>
     <p style="text-align: justify;">Pablo Orduña Fernandez, Deusto Foundation,<br>
     email: pablo.orduna [at]deusto.es., Language: [English, Spanish]</p>
 
-    <h3>Content Issue</h3>
     <p style="text-align: justify;">Olga Dziabenko, Deusto Foundation, <br>
     email: olga.dziabenko[at]deusto.es, Language: [English, Russian, Ukrainian]</p>
 
