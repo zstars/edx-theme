@@ -1,7 +1,7 @@
 ## mako
 <%!
-  from django.core.urlresolvers import reverse
-  from django.utils.translation import ugettext as _
+    from django.core.urlresolvers import reverse
+    from django.utils.translation import ugettext as _
 %>
 <%namespace name='static' file='/static_content.html'/>
 
@@ -10,29 +10,318 @@
 <%block name="title"><title>Collection</title></%block>
 
 <%block name="js_extra">
-  <script type="text/javascript">
-  </script>
+    <script type="text/javascript">
+    </script>
 </%block>
 
 <section class="container about" style="width: auto;">
-  <section class="vision">
-    <section class="message left" id="about">
-      <div class="photo">
-        <!--
-            Photo License: CC0 Public Domain (Free for commercial use / No attribution required)
-            https://pixabay.com/en/book-books-circle-curly-education-2869/
-        -->
-        <img src="${static.url('themes/odltheme/images/about.jpg')}" alt="" />
-      </div>
-      <article>
-        <h2>Collection</h2>
+    <section class="vision">
+        <section class="message left" id="about">
+            <div class="photo">
+                <!--
+                    Photo License: CC0 Public Domain (Free for commercial use / No attribution required)
+                    https://pixabay.com/en/book-books-circle-curly-education-2869/
+                -->
+                <img src="${static.url('themes/odltheme/images/collection.jpg')}" alt=""/>
+            </div>
+            <article>
 
-        <p>We are working on this page. Please come back soon!</p>
 
-        <p>&nbsp;</p>
-      </article>
-      <hr class="fade-right-hr-divider">
+                <h2>Collection of Resources</h2>
+
+                <table style="width:100%">
+                    <tr style="font-weight:bold">
+                        <td>Resource</td>
+                        <td>Subjects</td>
+                        <td>Student Age</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3" style="padding: 15px 0px ">GENERAL INFORMATION</th>
+                    </tr>
+
+
+                    <tr>
+                        <td><a href="https://www.mcrel.org/changing-schools/" target="_blank"> McREL International <a>
+                            consulting company helps to transform mindsets, inspire great education practices, and
+                            discover ever-better ways to help students flourish
+                        </td>
+                        <td> STEAM</td>
+                        <td>10-18</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.nano.gov/education-training/teacher-resources" target="_blank"> Nano.gov
+                            National Nanotechnology Initiative </a> resource for the K12 STEAM teachers
+                        </td>
+                        <td> Physics, Chemistry</td>
+                        <td>12-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://www.openculture.com/" target="_blank"> Open Culture<a> The best free
+                            cultural &amp; educational media ( lessons,lectures, courses, ebooks, images, audio books)
+                            on the web
+                        </td>
+                        <td> STEAM</td>
+                        <td>12-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://myteachsource.ascd.org/" target="_blank"> myTeachSource<a> Solutions to
+                            power inspired teaching
+                        </td>
+                        <td> STEAM</td>
+                        <td>6-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://c4lpt.co.uk/top100tools/top-100-tools-2007-2013/
+" target="_blank"> TOP TOOLS FOR LEARNING 2007-2016<a> Solutions to power inspired teaching
+                        </td>
+                        <td> STEAM</td>
+                        <td>6-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://abelardopardo.blogspot.com.es/?view=classic
+" target="_blank"> T2T. Techies meet teachers<a> Abelardo Pardo Blog
+                        </td>
+                        <td> STEAM</td>
+                        <td>6-18</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="3" style="padding: 15px 0px ">REMOTE & VIRTUAL LABORATORIES</th>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://www.labster.com/" target="_blank"> LABSTER <a> Laboratory Simulations for
+                            Educators to Empower their STEM Students
+                        </td>
+                        <td> Chemistry, Biology</td>
+                        <td>16-21</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://phet.colorado.edu/en/simulations/category/new" target="_blank"> PhET <a>
+                            Interactive simmulations
+                        </td>
+                        <td> Science</td>
+                        <td>10-18</td>
+                    </tr>
+
+
+                    <tr>
+                        <td><a href="https://c4e.engin.umich.edu/tools-services/3dsspp-software/" target="_blank"> 3D
+                            SSPP <a> 3D Static Strength Prediction Program� predicts static strength requirements for
+                                tasks such as lifts, pushes, and pulls. Product of The University of Michigan.
+
+                        </td>
+                        <td> STEM</td>
+                        <td>14-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://www.golabz.eu/labs" target="_blank"> Go-Lab <a> Global Online Science Labs
+                            for Inquiry Learning at School opens up online science laboratories for the use in school
+                            sector.
+                        </td>
+                        <td> Science</td>
+                        <td>10-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://archiv.ipn.uni-kiel.de/eibe/ENGLISH/INTRO.HTM" target="_blank"> The European
+                            Initiative for Biotechnology Education <a>
+                        </td>
+                        <td> biotechnology</td>
+                        <td>16-19</td>
+                    </tr>
+
+
+                    <tr>
+                        <td><a href="http://mudelid.5dvision.ee/" target="_blank"> Interactive models for natural
+                            sciences (in Estonian) <a>
+                        </td>
+                        <td> Natural Science</td>
+                        <td>14-17</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://labsland.com/web/en/" target="_blank"> LabsLand <a>
+                        </td>
+                        <td> Physics, Technology</td>
+                        <td>14-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://space.jpl.nasa.gov/" target="_blank"> Space propulsion laborotory <a>
+                        </td>
+                        <td> Physics</td>
+                        <td>15-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://www-personal.umich.edu/~tja//Links4.html" target="_blank"> Link Lengths and
+                            Simple Reach Calculations <a> The simulation for standing height data and average body
+                                proportions for simple posture and reach calculations. It use the National Health Survey
+                                data.
+
+                        </td>
+                        <td> STEM</td>
+                        <td>14-18</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="3" style="padding: 15px 0px ">DATA SETS</th>
+                    </tr>
+
+
+                    <tr>
+                        <td><a href="http://nasawavelength.org/" target="_blank"> NASA Wavelength <a> digital collection
+                            of Earth and space science resources for educators of all levels � from elementary to
+                            college, to out-of-school programs.
+                        </td>
+                        <td> STEAM</td>
+                        <td>6-18</td>
+                    </tr>
+                    <tr>
+
+
+                    <tr>
+                        <th colspan="3" style="padding: 15px 0px ">INQUIRY-BASED LEARNING RESOURCES</th>
+                    </tr>
+
+
+                    <tr>
+                        <td><a href="http://www.opendiscoveryspace.eu/" target="_blank">Open Discovery Space <a>
+                        </td>
+                        <td> STEAM</td>
+                        <td>All Ages</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://koolielu.ee/waramu/view/1-4ea09f34-b824-4ea6-abf7-2cd16e5ba550"
+                               target="_blank">Measuring and Monitoring Air Quality (in Estonian) <a>
+                        </td>
+                        <td> geography, environment</td>
+                        <td>15-18</td>
+                    </tr>
+
+
+                    <tr>
+                        <td><a href="http://www.golabz.eu/labs" target="_blank"> Go-Lab <a> Global Online Science Labs
+                            for Inquiry Learning at School opens up online science laboratories for the use in school
+                            sector.
+                        </td>
+                        <td> Science</td>
+                        <td>10-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://koolielu.ee/waramu/view/1-8433ce2c-eca0-4468-b90f-b069c431e6d1"
+                               target="_blank">Introductory exercise to inquiry-based learning (in Estonian) <a>
+                        </td>
+                        <td>biology</td>
+                        <td>13-18</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="3" style="padding: 15px 0px ">MEDIA</th>
+                    </tr>
+
+
+                    <tr>
+                        <td><a href="http://vaizdopamokos.lt/" target="_blank"> Video lectures (in Lithuanian) <a>
+                        </td>
+                        <td> Mathematics, Physics, IT</td>
+                        <td>15-18</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.openculture.com/" target="_blank"> Open Culture<a> The best free
+                            cultural &amp; educational media ( lessons,lectures, courses, ebooks, images, audio books)
+                            on the web
+                        </td>
+                        <td> STEAM</td>
+                        <td>12-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://www.dvolver.com/moviemaker/make.html" target="_blank">DVOLVER<a> Moviemaker
+                        </td>
+                        <td> STEAM</td>
+                        <td>12-18</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://www.doink.com/tutorials-1/" target="_blank">Do Ink Animation<a> Two Minutes
+                            tutorial shows how to create impressive Animations using the Do Ink Animation & Drawing App
+                            on the iPad.
+                        </td>
+                        <td> STEAM</td>
+                        <td>14-18</td>
+                    </tr>
+
+                    <tr>
+                        <td>PowToon [<a href="https://www.powtoon.com/home/g/es/" target="_blank">Spanish<a>],[<a
+                                href="https://www.powtoon.com/home/g/us/" target="_blank">English<a>] Software creates
+                            animated videos and presentations.
+                        </td>
+                        <td> STEAM</td>
+                        <td>14-18</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="3" style="padding: 15px 0px ">LEARNING OBJECTS</th>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://mkp.emokykla.lt/imo/lt" target="_blank"> Learning objects for gymnasium (in
+                            Lithuanian) <a>
+                        </td>
+                        <td> Biology, Chemistry, Physic, Mathematics</td>
+                        <td>15-18</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.fizika.lm.lt/" target="_blank"> Physic website (in Lithuanian) <a>
+                        </td>
+                        <td> Physics</td>
+                        <td>ALL AGES</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://mkp.emokykla.lt/saugi-chemija/" target="_blank"> Safe chemistry: lab works
+                            (in Lithuanian) <a>
+                        </td>
+                        <td> Chemistry</td>
+                        <td>15-16</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="http://gamta5-6.mkp.emokykla.lt/" target="_blank"> Natural Sciences learning
+                            objects for grade 5-6 and 7-8 (in Lithuanian) <a>
+                        </td>
+                        <td> Natural sciences</td>
+                        <td>11-14</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="https://www.khanacademy.org/" target="_blank"> KHAN ACADEMY<a> The space of
+                            practice exercises, instructional videos, and a personalized learning dashboard that empower
+                            learners to study at their own pace in and outside of the classroom.
+                        </td>
+                        <td> STEAM</td>
+                        <td>6-18</td>
+                    </tr>
+
+
+                </table>
+
+
+            </article>
+            <hr class="fade-right-hr-divider">
+        </section>
     </section>
-  </section>
 </section>
+
+
 
